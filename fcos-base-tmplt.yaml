@@ -350,7 +350,7 @@ systemd:
         Type=oneshot
         RemainAfterExit=yes
         ExecStart=/usr/bin/docker volume create portainer_data
-        ExecStart=/usr/bin/docker run --privileged=true -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce
+        ExecStart=/usr/bin/docker run --privileged=true -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ee:latest
         ExecStart=/bin/touch /var/lib/portainer.stamp
         ExecStart=/bin/systemctl --no-block reboot
 
