@@ -337,7 +337,7 @@ systemd:
             ExecStart=/sbin/fstrim -av
 
 # setup nfs mount
-    - name: var-mnt-data.mount
+    - name: var-mnt-data-gamserver.mount
       enabled: true
       contents: |
         [Unit]
