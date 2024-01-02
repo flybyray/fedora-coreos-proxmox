@@ -336,6 +336,21 @@ systemd:
             ExecStart=
             ExecStart=/sbin/fstrim -av
 
+# setup nfs mount
+    - name: var-mnt-data.mount
+      enabled: true
+      contents: |
+        [Unit]
+        Description=Mount data directory
+
+        [Mount]
+        What=192.168.11.3:/export/gameserver
+        Where=/var/mnt/data/gameserver
+        Type=nfs4
+
+        [Install]
+        WantedBy=multi-user.target
+        
 # setup and install portainer
     - name: setup-portainer.service
       enabled: true
