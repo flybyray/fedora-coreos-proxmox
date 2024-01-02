@@ -265,6 +265,8 @@
           kernel.printk=4
 
 # nfs folder config
+storage:
+  directories:
     - path: /var/mnt/data/gameserver
       mode: 0700
 # geco-motd.service
