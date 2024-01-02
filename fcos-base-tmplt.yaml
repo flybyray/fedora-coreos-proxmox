@@ -292,13 +292,13 @@ systemd:
         Description=Geco-iT Cloudinit
         Wants=network-online.target
         After=network.target network-online.target
-
+ 
         [Service]
         Type=oneshot
         TimeoutStartSec=0
         ExecStart=/usr/local/bin/geco-cloudinit
         RemainAfterExit=yes
-
+ 
         [Install]
         WantedBy=multi-user.target
 
@@ -342,8 +342,6 @@ systemd:
       contents: |
         [Unit]
         Description=Mount data directory
-        Wants=basic.target
-        After=basic.target network.target
 
         [Mount]
         What=192.168.11.3:/gameserver
