@@ -264,6 +264,7 @@
           # to hide audit messages from the interactive console
           kernel.printk=4
 
+
 # geco-motd.service
 systemd:
   units:
@@ -297,7 +298,7 @@ systemd:
         TimeoutStartSec=0
         ExecStart=/usr/local/bin/geco-cloudinit
         RemainAfterExit=yes
-        
+
         [Install]
         WantedBy=multi-user.target
 
