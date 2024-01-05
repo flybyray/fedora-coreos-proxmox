@@ -358,8 +358,8 @@ systemd:
       contents: |
         [Unit]
         Description=Tovster Setup Portainer
-        After=network-online.target
-        Require=network-online.target
+        After=network-online.target var-mnt-data-gameserver.mount
+        Require=network-online.target var-mnt-data-gameserver.mount
         ConditionPathExists=!/var/lib/portainer.stamp
 
         [Service]
