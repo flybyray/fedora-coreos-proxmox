@@ -23,7 +23,7 @@ MiLK_MaN](https://forum.proxmox.com/members/milk_man.52335/) for [his fixes for 
 
 * **vmsetup.sh**
 
-```
+```shell
 TEMPLATE_VMID="1000"                     # Template Proxmox VMID 
 TEMPLATE_VMSTORAGE="thin-ssd"           # Proxmox storage  
 SNIPPET_STORAGE="local"                 # Snippets storage for hook and ignition file
@@ -44,8 +44,8 @@ it contains :
 * Add Geco-iT motd/issue
 
 ### Script output
-```
-root@vc0:/opt/fcos-tmplt# ./vmsetup.sh 
+```txt
+root@vc0:/opt/fcos-tmplt# ./vmsetup.sh   # or 'DEBUG=1 TRACE=1 ./vmsetup.sh' to debug
 Check if vm storage thin-ssd exist... [ok]
 Check if snippet storage local exist... [ok]
 Copy hook-script and ignition config to snippet storage...
@@ -107,4 +107,4 @@ Only these parameters are supported by our cloudinit wrapper:
 The settings are applied at boot
 
 
-[def]: https://forum.proxmox.com/members/milk_man.52335/
+[//]: https://forum.proxmox.com/members/milk_man.52335/
